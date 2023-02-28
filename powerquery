@@ -1,0 +1,15 @@
+let
+    urlDaApi = "LINKDASUAPI", 
+    chaveDaApi = "SUACHAVE", 
+    headers = [
+        #"X-API-Key" = chaveDaApi
+    ],
+    opts = [
+        Headers = headers,
+        Query = [            
+        ]
+    ],
+    response = Web.Contents(urlDaApi, opts),
+    json = Json.Document(response)
+in
+    json
